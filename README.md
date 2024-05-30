@@ -2,6 +2,9 @@
 Repository for KCD - Peru 2024 
 This repository was created for the presentation at KCD Lima - Peru 2024
 
+
+
+.
 Prerequisites
 To use this repository, you need the following installed locally:
 
@@ -9,6 +12,8 @@ To use this repository, you need the following installed locally:
 $ curl https://releases.rancher.com/install-docker/20.10.sh | sh
 
 
+
+.
 START
 First let's upload the rancher to one of the servers:
 
