@@ -9,6 +9,7 @@ Prerequisites
 To use this repository, you need the following installed locally:
 
 - Docker
+
 $ curl https://releases.rancher.com/install-docker/20.10.sh | sh
 
 
