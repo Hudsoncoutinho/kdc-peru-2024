@@ -7,7 +7,7 @@ This repository was created for the presentation at KCD Lima - Peru 2024
 - sudo ssh -i kcd-lima.pem ubuntu@ IP
 
 
-- Docker
+- Install Docker (ubuntu 22.04)
 $ sudo apt update
 $ sudo apt install apt-transport-https ca-certificates curl software-properties-common
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
