@@ -50,9 +50,22 @@ $ docker logs  container-id  2>&1 | grep "Bootstrap Password:"
 * Deploy Kubernetes
 Acessing another server - sudo ssh -i kcd-lima.pem ubuntu@ IP
 Version  install - 'v1.26.15+rke2r1' 
-$ 
 
 
+* Install CNI (cilium) 
+$ helm repo add cilium https://helm.cilium.io/
+$ helm repo update
+$ helm upgrade rke2-cilium cilium/cilium --namespace kube-system \
+   --set hubble.ui.enabled=true \
+   --set hubble.relay.enabled=true \
+   --set hubble.metrics.server.enabled=true 
+
+
+* Install Apps
+- Deploy manifests 
+
+
+...
 
 
 
