@@ -61,8 +61,10 @@ $ helm upgrade rke2-cilium cilium/cilium --namespace kube-system \
    --set hubble.metrics.server.enabled=true 
 
 
-* Install Apps
-- Deploy manifests 
+* Deploy manifests 
+$ ingress
+$ Apps
+
 
 
 ...
