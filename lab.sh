@@ -63,7 +63,9 @@ $ helm upgrade rke2-cilium cilium/cilium --namespace kube-system \
 
 * Deploy manifests 
 $ ingress
-$ Apps
+$ Apps 
+$ charge
+$ containment
 
 
 
