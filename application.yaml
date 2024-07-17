@@ -1,5 +1,4 @@
-## Front ##
-
+# Front-end Deployment (Apache)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,12 +15,12 @@ spec:
     spec:
       containers:
       - name: apache
-        image: apache:latest
+        image: httpd:latest  # Correção: "httpd" é a imagem correta
         ports:
         - containerPort: 80
 
-## Service ##
-
+---
+# Front-end Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -34,12 +33,8 @@ spec:
       port: 80
       targetPort: 80
 
-
-
-
-
-### Back-end ###
-
+---
+# Back-end Deployment (MongoDB)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -59,9 +54,16 @@ spec:
         image: mongo:latest
         ports:
         - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_DATABASE
+          value: mydatabase
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: myuser
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: mypassword
 
-## Service ##
-
+---
+# Back-end Service
 apiVersion: v1
 kind: Service
 metadata:
